@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poem Generator</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #f9f5f0;
+      padding: 2em;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+      color: #5a3e36;
+    }
+
+    input {
+      margin: 0.5em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    button {
+      margin: 1em 0.5em 0 0.5em;
+      padding: 0.7em 1.5em;
+      background-color: #8e6e53;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #7a5c44;
+    }
+
+    #poem {
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Poem Generator</h1>
+  <input type="text" id="name" placeholder="Enter your name" />
+  <input type="text" id="color" placeholder="Enter your favorite color" />
+  <button onclick="generatePoem()">Generate Poem</button>
+
+  <div id="poem"></div>
+
+  <button onclick="resetPoem()">Create Another Poem</button>
+
+  <p><a href="scratch.html">← Back to Scratch Page</a></p>
+
+  <script>
+    function generatePoem() {
+      const name = document.getElementById("name").value;
+      const color = document.getElementById("color").value;
+      const poem = `
+        A poem for ${name}, so bright, <br>
+        Wrapped in colors, full of light. <br>
+        The world is a canvas, with hues so bold, <br>
+        Like your favorite color, ${color}, we’re told. <br>
+        Your name shines like the stars above, <br>
+        A reminder of the power of love.
+      `;
+      document.getElementById("poem").innerHTML = poem;
+    }
+
+    function resetPoem() {
+      document.getElementById("name").value = "";
+      document.getElementById("color").value = "";
+      document.getElementById("poem").innerHTML = "";
+    }
+  </script>
+</body>
+</html>

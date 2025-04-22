@@ -1,0 +1,52 @@
+/* Global page styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #dcdde0;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Banner header */
+  .banner {
+    background-color: #b3d4f0;
+    padding: 2em;
+    text-align: center;
+    color: #2a2d46;
+    border-bottom: 2px solid #2a2d46;
+  }
+  
+  /* Info-block sections (3+ divs styled) */
+  .info-block {
+    background-color: #ffffff;
+    padding: 1.5em;
+    margin: 2em auto;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Lists inside info blocks */
+  .info-block ol, 
+  .info-block ul {
+    padding-left: 1.5em;
+    color: #444;
+  }
+  
+  /* Links */
+  a {
+    color: #2a2d46;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
